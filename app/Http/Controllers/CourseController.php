@@ -10,11 +10,9 @@ class CourseController extends Controller
 {
     public function index(Request $request)
     {
-//        dd(Course::get());
-        $courses = Course::with(['subjects', 'users'])->filter($request)->get();
-        $subjects = Subject::get()->pluck('name', 'slug');
+        $courses = Course::with(['subjects', 'users'])->filter($request)->paginate(5);
 
-        return view('courses.index', compact('courses', 'subjects'));
+        return view('courses.index', compact('courses'));
     }
 
 }

@@ -6,7 +6,7 @@
                 <ul class="list-inline">
                     @foreach($course->subjects as $subject)
                         <li class="list-inline-item">
-                            <span class="border rounded border-info">{{$subject->name}}</span>
+                            <span class="btn btn-sm btn-outline-dark" style="color: {{$subject->colour_theme}}">{{$subject->name}}</span>
                         </li>
                     @endforeach
                 </ul>
@@ -15,7 +15,6 @@
             <ul class="list-inline">
                 <span class="btn btn-primary btn-sm">
                 <li class="list-inline-item">{{$course->formattedAccess}}</li>
-                    {{--<a href=""></a>--}}
                 </span>
                 <span class="btn btn-primary btn-sm">
                 <li class="list-inline-item">{{$course->formattedDifficulty}}</li>
