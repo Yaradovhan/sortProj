@@ -15,7 +15,7 @@
             <ul class="list-inline">
                 <span class="btn btn-primary btn-sm">
                 <li class="list-inline-item">{{$course->formattedAccess}}</li>
-                    <a href=""></a>
+                    {{--<a href=""></a>--}}
                 </span>
                 <span class="btn btn-primary btn-sm">
                 <li class="list-inline-item">{{$course->formattedDifficulty}}</li>

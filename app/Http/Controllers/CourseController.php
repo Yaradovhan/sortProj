@@ -10,6 +10,7 @@ class CourseController extends Controller
 {
     public function index(Request $request)
     {
+//        dd(Course::get());
         $courses = Course::with(['subjects', 'users'])->filter($request)->get();
         $subjects = Subject::get()->pluck('name', 'slug');
 
