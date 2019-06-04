@@ -18,3 +18,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('/courses', 'Api\CourseController@index')->name('courses.index');
+Route::get('/courses/filters', 'Api\CourseController@filters')->name('courses.filters');

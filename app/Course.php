@@ -12,7 +12,11 @@ use Illuminate\Database\Eloquent\Model;
 class Course extends Model
 {
     public $appends = [
-        'started'
+        'started',
+        'formattedAccess',
+        'formattedDifficulty',
+        'formattedType',
+        'formattedStarted'
     ];
 
     public function getFormattedDifficultyAttribute()
